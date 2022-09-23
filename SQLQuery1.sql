@@ -20,7 +20,23 @@ select * from Course
 SELECT AVG([Age])
 FROM Course;
 
-
-
+  
+  --task1   Yashi butun muellimlerin orta yashindan boyuk olan muellimlerin siyahisi.
 select * FROM Course where [Age] > (SELECT AVG([Age])
 FROM Course)
+
+
+
+--task2      Maashi 1000  ve 3000 araliqinda olan muellimlerin siyahisi.
+select * FROM Course where [Salary] > 1000 AND [Salary] < 3000
+
+
+--task3      Emailin sonu mail.ru olan muellimlerin adi ve soyadi
+select * FROM Course 
+WHERE [Email] LIKE '%mail.ru'
+
+
+
+--task4    Adi E herfi ile bashlayan muellimlerin siyahisi.
+select * FROM Course 
+WHERE [Name] LIKE 'E%'
